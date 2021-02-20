@@ -14,7 +14,6 @@ The code is designed for fast multiscale optimal transport but also permits sing
 
 * Optimal transport solved with Lemon, CPLEX, GPLK or MOSEK
 * Fast approximate transport using a mutliscale strategy
-* Rpackage for sinkhorn transport (both multiscale and single scale, depends on gmra R package)
 * Rpackage for optimal transport (both multiscale and single scale, depends on gmra R package )
 
 ## Install
