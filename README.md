@@ -24,6 +24,7 @@ library(devtools)
 if(!require("gmra")){
   devtools::install_github("samuelgerber/gmra")
 }
+Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = "true")
 devtools::install_github("samuelgerber/mop")
 ```
 
