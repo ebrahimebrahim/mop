@@ -1,6 +1,6 @@
 # Multiscale Optimal Transport
 
-An implementation of the fast multiscale approach to optimal transport described in:  
+An R package implementation of the fast multiscale approach to optimal transport described in:  
 >Multiscale Strategies for Computing Optimal Transport  
 >Samuel Gerber, Mauro Maggioni  
 >Journal of Machine Learning Research; 18(72):1−32, 2017.  
@@ -14,7 +14,6 @@ The code is designed for fast multiscale optimal transport but also permits sing
 
 * Optimal transport solved with Lemon, CPLEX, GPLK or MOSEK
 * Fast approximate transport using a mutliscale strategy
-* Rpackage for optimal transport (both multiscale and single scale, depends on gmra R package )
 
 ## Install
 
@@ -74,28 +73,3 @@ devtools::install_github("samuelgerber/mop")
      time2
      time3
 ```
-
-### Requirements
-
-The build process is using CMake.
-
-R packages:
-
-* gmra https://github.com/suppechasper/gmra
-
-C/C++ Libraries:
-
-* Eigen
-* For some of the comandline  version CPLEX, MOSEK or GLPK (currently setup for CPLEX but few modifications are required to change it to MOSEK or GLPK, edit the .cxx driver files in commandline accordingly to use the different solver header files and instantiate the solver you want to use. Then edit CMake files to point to the library specific header files and libraries. )
-
-
-### Using other linear programming libraries
-
-The default setup uses lemon for solving linear progragraming. If you would
-like to use another linear programming the package supports CPLEX, MOSEK and
-GLPK.
-
-To setup for a a specific library edit src/Makevars and src/mop_config.h in the
-Rpackage/mop directory before buidling the package.
-
-To install the package requires that all the libraries you are using are on R's linker path.
