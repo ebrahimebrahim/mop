@@ -340,7 +340,6 @@ class TransportPlan{
       this->pathCounter = res->pathCounter;
       this->toPathCounts = res->toPathCounts;
       this->nTotalPaths = res->nTotalPaths;
-      return res;
     };
 
 };
